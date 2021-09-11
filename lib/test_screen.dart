@@ -46,7 +46,7 @@ class _TestScreenState extends State<TestScreen> {
           ),
           Divider(color: Colors.black,thickness: 1.0,),
           Padding(
-            padding: EdgeInsets.only(left:10.0,right:10.0),
+            padding: EdgeInsets.only(left:16.0,right:16.0),
             child:Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -58,9 +58,10 @@ class _TestScreenState extends State<TestScreen> {
             ),
           ),
           Padding(
-              padding: EdgeInsets.all(7.0),
+              padding: EdgeInsets.only(left: 15.0,right: 15,top: 10),
             child:Container(
-              decoration: BoxDecoration(border:Border.all(color: Colors.black)),
+              decoration: BoxDecoration(border:Border.all(color: Colors.black),
+              borderRadius: BorderRadius.circular(7.0)),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -84,7 +85,7 @@ class _TestScreenState extends State<TestScreen> {
                 ],
               ),
             )
-          ),
+          ),SizedBox(height: 10,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -106,7 +107,7 @@ class _TestScreenState extends State<TestScreen> {
               ),
               Spacer(),
               Padding(
-                  padding: EdgeInsets.only(right: 10.0),
+                  padding: EdgeInsets.only(right: 15.0),
                   child:Align(
                   alignment: Alignment.topRight,
                   child:buildTextWidget("Next", Colors.black,fontWeight: FontWeight.bold)
